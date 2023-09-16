@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Hind&family=Poppins&family=Roboto:wght@300&family=Sigmar&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;    
+}
+
+body {
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 6% 20px 10%;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar.sticky {
+    padding: 20px 6% 20px 10%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-bottom: none;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 1000;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #12f7ff;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 17px 27px;
+}
+
+.navlist a:hover {
+    color: #12f7ff;
+    text-shadow: 0 0 10px rgba(18,247,255,0.6),
+    0 0 20px rgba(18,247,255,0.6),
+    0 0 30px rgba(18,247,255,0.6),
+    0 0 40px rgba(18,247,255,0.6),
+    0 0 70px rgba(18,247,255,0.6),
+    0 0 80px rgba(18,247,255,0.6),
+    0 0 100px rgba(18,247,255,0.6),
+    0 0 150px rgba(18,247,255,0.6);
+}
+
+
+
+/* Home Section */
+
+#home {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: url(Images/b1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 4rem;
+    padding: 7px 11% 0;
+}
+
+.home-content {
+    max-width: 650px;
+}
+
+.home-content h3 {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.home-content h1 {
+    font-size: 70px;
+    font-weight: 800;
+    margin: -3px 0;
+}
+
+.home-content h2 {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.home-content h2 span {
+    color: #12f7ff;
+}
+
+.home-content p {
+    font-size: 16px;
+}
+
+.home-content .cont {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 55px;
+    margin-top: 40px;
+}
+
+.cont .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 100%;
+    background: #12f7ff;
+    color: #250821;
+    /* border: 2px solid #250821; */
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    overflow: hidden;
+    transform: 0.6s ease;
+    box-shadow: 0 0 0.8rem #12f7ff;
+    z-index: 1;
+    position: relative;
+}
+
+.cont .btn:hover {
+    color: #12f7ff;
+}
+
+.cont .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #250821;
+    z-index: -1;
+    transition: 0.6s ease;
+}
+
+.cont .btn:hover::before {
+    width: 100%;
+}
+
+.cont .btn:nth-child(1) {
+    background: #12f7ff;
+    color: #250821;
+}
+
+.cont .btn:nth-child(1)::before {
+    background-color: #250821;
+}
+
+.cont .btn:nth-child(1):hover {
+    color: #12f7ff;
+}
+
+.social-media a {
+    color: #12f7ff;
+    font-size: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #12f7ff;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 10px 15px 0 0;
+}
+
+.social-media a:hover {
+    background-color: #12f7ff;
+    color: #250821;
+    box-shadow: 0 0 20px #12f7ff;
+}
+
+.home-image {
+    position: relative;
+}
+
+.img-box {
+    /* position: relative; */
+    text-align: center;
+    /* z-index: 2; */
+}
+
+.img-box img {
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    z-index: 1;
+}
+
+.liquid-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: -19%;
+}
+
+.liquid-shape:nth-child(2){
+    filter: blur(50px);
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 106px;
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+/* About Section */
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.about h2 {
+    color: #111;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    font-size: 20px;
+    color: #9446FC;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .title::after {
+    content: "who i am";
+}
+
+.about .about-content, .socialss .serv-content, .skills .skills-content, .contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .right {
+    width: 25%;
+}
+
+.about .about-content .right img {
+    height: 450px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    position: relative;
+}
+
+.about .about-content .left {
+    width: 60%;
+}
+
+.about .about-content .left .text {
+    color: #111;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .left .text span {
+    color: #9446FC;
+}
+
+.about .about-content .left .text span {
+    color: #9446FC;
+}
+
+.typed-cursor.typed-cursor--blink {
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+}
+
+.typed-cursor {
+    opacity: 1;
+}
+
+.about .about-content .left p {
+    text-align: justify;
+    color: #111;
+}
+
+.about .about-content .left a {
+    display: inline-block;
+    background: #9446FC;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #9446FC;
+    transition: all 0.3s ease;
+}
+
+.about-animation {
+    position: absolute;
+    right: 5%;
+    z-index: -1;
+}
+
+
+
+
+/* Skillset Section */
+
+#skills {
+    position: relative;
+    width: 100%;
+}
+
+#skills::before {
+    content: "";
+    position: absolute;
+    background: url(Images/b3.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.s-content {
+    padding-top: 40px;
+}
+
+
+.s-icons {
+    width: 240px;
+    border: 2px solid #12f7ff;
+    border-radius: 5px;
+    box-shadow: 4px 3px 8px 0px #12f7ff;
+    display: table;
+    font-size: 70px;
+    margin: 15px;
+    opacity: .93;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    transition: all .4s ease 0s;
+    vertical-align: middle;
+    transition: 0.4s ease;
+}
+
+.s-icons:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+}
+
+.s-container{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* .s-heading {
+    margin-bottom: 40px;
+} */
+
+.s-heading h1 {
+    position: relative;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+}
