@@ -124,7 +124,7 @@
                         I am a passionate and driven individual, eager to contribute to the world of engineering. I am
                         excited to start this new journey and see where it takes me.</p>
 
-                    <a href="#" target="_blank">Connect</a>
+                    <a href="#contact">Connect</a>
                 </div>
                 <div class="column right hidden right1">
                     <img class="profile_photo" src="Images/s4.jpg" alt="">
@@ -338,8 +338,10 @@
 
 
             <div class="contactForm">
-                <form>
+                <form id="contactForm">
                     <h2>Send a Meassage</h2>
+                    <div class="alert">Message sent Successfully! 😊</div>
+
                     <div class="inputBox">
                         <input type="text" id="name" required="required">
                         <span>Name</span>
@@ -372,7 +374,9 @@
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="script.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>

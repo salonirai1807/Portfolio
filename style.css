@@ -744,10 +744,11 @@ section .title::after {
   .contactForm .inputBox input[type="submit"] {
     background: #ff578b;
     color: white;
-    border: 2px solid #ff578b;
+    border: 2.3px solid #ff578b;
+    border-radius: 5px;
     font-size: 1.1em;
     max-width: 120px;
-    font-weight: 600;
+    font-weight: 800;
     cursor: pointer;
     padding: 14px 15px;
     transition: 0.4s ease;
@@ -755,8 +756,9 @@ section .title::after {
   
   .contactForm .inputBox input[type="submit"]:hover {
     color: black;
-    border: 2px solid black;
+    border: 2.3px solid black;
     background-color: white;
+    font-weight: 800;
   }
 
   .social {
@@ -778,6 +780,18 @@ section .title::after {
   .social svg:hover {
     transform: scale(1.1);
   }
+
+.alert {
+    color: #564f4f;
+    width: 85%;
+    background: #cfe5ef;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px auto 0;
+    display: none;
+}
 
 
 /* Footer Section */
